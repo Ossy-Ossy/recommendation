@@ -10,9 +10,9 @@ st.write("""
 This system recommends for you similar movies based on your favorite movie
 """)
 
-movies_data = pd.read_csv("C:\\Users\\hp\\Downloads\\movies.csv")
-movie_vectorizer = joblib.load('C:\\Users\\hp\\Downloads\\vectorizer_movie_recommend.pkl')
-similarity = joblib.load('C:\\Users\\hp\\Downloads\\similarity_movie_recommend.pkl')
+movies_data = pd.read_csv("movies.csv")
+movie_vectorizer = joblib.load('vectorizer_movie_recommend.pkl')
+similarity = joblib.load('similarity_movie_recommend.pkl')
 
 def get_movie_recommendations(movie_name):
     list_of_titles = movies_data['title'].tolist()
